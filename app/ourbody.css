@@ -73,3 +73,15 @@
 .search-corner{right:10px!important;left:auto!important}
 .top-actions{left:10px!important;right:auto!important}
 }
+
+/* round 6: swap side bars, soft backgrounds, title colours */
+@media(min-width:768px) and (min-height:601px){
+.studio .layers-panel{left:auto!important;right:30px!important}
+.studio .view-controls{right:auto!important;left:30px!important}
+body .detail-sheet{right:auto!important;left:95px!important}
+}
+.studio .layers-panel,.studio .layers-panel.mobile-open{background:rgba(219,234,254,.94)!important}
+.studio .view-controls{background:rgba(220,252,231,.94)!important}
+.identity h1{background:none!important;-webkit-background-clip:border-box;background-clip:border-box;color:#dc2626!important;-webkit-text-fill-color:#dc2626!important}
+.identity .brand-sub{font-size:17px;color:#ec4899;font-weight:700}
+@media(max-width:767px){.identity .brand-sub{font-size:14px}}
