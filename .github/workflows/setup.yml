@@ -1,0 +1,25 @@
+name: Setup project
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack code zip
+        run: |
+          unzip -o OurBody-1-code.zip -x '.github/*'
+          rm OurBody-1-code.zip
+      - name: Fetch 3D models from upstream
+        run: |
+          git clone --depth 1 https://github.com/ashemag/human-atlas /tmp/upstream
+          mkdir -p public/models
+          cp /tmp/upstream/public/models/* public/models/
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Add OurBody project files"
+          git push
