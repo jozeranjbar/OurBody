@@ -22,3 +22,12 @@
 .top-actions .about-btn{width:52px!important;min-width:52px!important;height:52px!important}
 .top-actions .about-btn svg{width:34px!important;height:34px!important}
 }
+
+/* explode slider (native range) */
+.explode-range{-webkit-appearance:none;appearance:none;display:block;width:100%;height:36px;margin:0;background:transparent;direction:ltr;--p:0%}
+.explode-range:focus{outline:none}
+.explode-range::-webkit-slider-runnable-track{height:8px;border-radius:99px;background:linear-gradient(90deg,#2563eb var(--p),#cfd8df var(--p))}
+.explode-range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:30px;height:30px;margin-top:-11px;border-radius:50%;background:#fff;border:5px solid #2563eb;box-shadow:0 2px 8px #0003}
+.explode-range::-moz-range-track{height:8px;border-radius:99px;background:#cfd8df}
+.explode-range::-moz-range-progress{height:8px;border-radius:99px;background:#2563eb}
+.explode-range::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:5px solid #2563eb}
