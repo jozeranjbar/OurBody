@@ -1,27 +1,27 @@
 export type SystemId = 'skeletal'|'muscular'|'arterial'|'venous'|'nervous'|'digestive'|'respiratory'|'urinary'|'reproductive'|'lymphatic'|'endocrine'|'integumentary'|'connective'|'sensory'|'cardiac';
 export const SYSTEMS: {id:SystemId;name:string;color:string;description:string}[] = [
- {id:"skeletal",name:"اسکلت",color:"#e2d9ba",description:"استخوان‌ها چارچوب نگه‌دارنده‌ی بدن را می‌سازند، از اندام‌ها محافظت می‌کنند و محل اتصال عضلات‌اند. مغز استخوان هم سلول‌های خون می‌سازد و املاح را ذخیره می‌کند."},
- {id:"muscular",name:"عضلات",color:"#a85b50",description:"عضلات اسکلتی با کشیدن استخوان‌ها حرکت می‌سازند. همراه با وترها مفاصل را حرکت می‌دهند، وضعیت بدن را حفظ می‌کنند و گرما تولید می‌کنند."},
- {id:"cardiac",name:"قلب",color:"#b96760",description:"قلب پمپی عضلانی با چهار حفره است. دریچه‌های آن خون را در مسیر درست، یعنی گردش خون ریوی و عمومی، هدایت می‌کنند."},
+ {id:"integumentary",name:"سطح بدن",color:"#ba9b7d",description:"سطح بدن یک مرجع بیرونی آناتومیک است. دستگاه پوششی سدی محافظ می‌سازد و در حس لامسه و تنظیم دمای بدن نقش دارد."},
+ {id:"reproductive",name:"دستگاه تولیدمثل",color:"#bda098",description:"ساختارهای تولیدمثل مردانه که در اینجا نشان داده شده‌اند در تولید، رسیدن و انتقال اسپرم و ساخت هورمون‌های جنسی نقش دارند."},
+ {id:"endocrine",name:"غدد درون‌ریز",color:"#c5a09a",description:"غدد درون‌ریز هورمون‌ها را به خون می‌ریزند تا سوخت‌وساز، رشد، پاسخ به استرس و تولیدمثل را هماهنگ کنند."},
+ {id:"urinary",name:"دستگاه ادراری",color:"#b47961",description:"کلیه‌ها خون را فیلتر می‌کنند و تعادل آب، املاح و اسید و باز را تنظیم می‌کنند. ادرار از حالب‌ها به مثانه می‌رود و از پیشابراه خارج می‌شود."},
  {id:"sensory",name:"اندام‌های حسی",color:"#b0c8ce",description:"این ساختارها در حواس ویژه از جمله بینایی، شنوایی و تعادل نقش دارند. بافت‌های تخصصی آن‌ها محرک‌ها را دریافت می‌کنند و با دستگاه عصبی پیام را منتقل می‌کنند."},
- {id:"arterial",name:"سرخرگ‌ها",color:"#c05245",description:"قلب خون را به گردش می‌اندازد. سرخرگ‌ها خون را از قلب به بافت‌ها می‌برند و در گردش ریوی آن را به ریه‌ها می‌رسانند."},
- {id:"venous",name:"سیاهرگ‌ها",color:"#527c9f",description:"سیاهرگ‌ها خون را به قلب برمی‌گردانند. شبکه‌های سطحی و عمقی خون بافت‌ها را جمع می‌کنند و سیاهرگ‌های ریوی خون اکسیژن‌دار ریه‌ها را به قلب می‌آورند."},
- {id:"nervous",name:"دستگاه عصبی",color:"#d8b565",description:"مغز، نخاع و اعصاب محیطی پیام‌ها را حمل و پردازش می‌کنند و در حس، حرکت، هماهنگی و تنظیم خودکار کارهای بدن نقش دارند."},
  {id:"respiratory",name:"دستگاه تنفسی",color:"#b98991",description:"راه‌های هوایی هوا را به ریه‌ها می‌رسانند، جایی که اکسیژن و دی‌اکسید کربن بین هوا و خون جابه‌جا می‌شوند. تنفس با تغییر فشار توسط عضلات تنفسی انجام می‌شود."},
  {id:"digestive",name:"دستگاه گوارش",color:"#b8916b",description:"لوله‌ی گوارش غذا را خرد می‌کند، مواد مغذی و آب را جذب می‌کند و ضایعات را جلو می‌برد. اندام‌های کمکی صفرا و آنزیم‌ها را فراهم می‌کنند."},
- {id:"urinary",name:"دستگاه ادراری",color:"#b47961",description:"کلیه‌ها خون را فیلتر می‌کنند و تعادل آب، املاح و اسید و باز را تنظیم می‌کنند. ادرار از حالب‌ها به مثانه می‌رود و از پیشابراه خارج می‌شود."},
+ {id:"nervous",name:"دستگاه عصبی",color:"#d8b565",description:"مغز، نخاع و اعصاب محیطی پیام‌ها را حمل و پردازش می‌کنند و در حس، حرکت، هماهنگی و تنظیم خودکار کارهای بدن نقش دارند."},
+ {id:"cardiac",name:"قلب",color:"#b96760",description:"قلب پمپی عضلانی با چهار حفره است. دریچه‌های آن خون را در مسیر درست، یعنی گردش خون ریوی و عمومی، هدایت می‌کنند."},
  {id:"lymphatic",name:"دستگاه لنفی",color:"#879f7c",description:"رگ‌های لنفی مایع اضافی بافت‌ها را به گردش خون برمی‌گردانند. غدد لنفی و دیگر اندام‌های لنفی در پایش و پاسخ ایمنی نقش دارند."},
- {id:"endocrine",name:"غدد درون‌ریز",color:"#c5a09a",description:"غدد درون‌ریز هورمون‌ها را به خون می‌ریزند تا سوخت‌وساز، رشد، پاسخ به استرس و تولیدمثل را هماهنگ کنند."},
- {id:"reproductive",name:"دستگاه تولیدمثل",color:"#bda098",description:"ساختارهای تولیدمثل مردانه که در اینجا نشان داده شده‌اند در تولید، رسیدن و انتقال اسپرم و ساخت هورمون‌های جنسی نقش دارند."},
- {id:"integumentary",name:"سطح بدن",color:"#ba9b7d",description:"سطح بدن یک مرجع بیرونی آناتومیک است. دستگاه پوششی سدی محافظ می‌سازد و در حس لامسه و تنظیم دمای بدن نقش دارد."},
- {id:"connective",name:"بافت پیوندی",color:"#aec3bb",description:"غضروف، رباط‌ها و دیگر بافت‌های پیوندی ساختارها را نگه می‌دارند، به هم وصل می‌کنند و از هم جدا می‌کنند. آن‌ها مفاصل را پایدار می‌کنند و بار مکانیکی را پخش می‌کنند."},
+ {id:"connective",name:"بافت‌های پیوندی",color:"#aec3bb",description:"غضروف، رباط‌ها و دیگر بافت‌های پیوندی ساختارها را نگه می‌دارند، به هم وصل می‌کنند و از هم جدا می‌کنند. آن‌ها مفاصل را پایدار می‌کنند و بار مکانیکی را پخش می‌کنند."},
+ {id:"arterial",name:"سرخرگ‌ها",color:"#c05245",description:"قلب خون را به گردش می‌اندازد. سرخرگ‌ها خون را از قلب به بافت‌ها می‌برند و در گردش ریوی آن را به ریه‌ها می‌رسانند."},
+ {id:"venous",name:"سیاهرگ‌ها",color:"#527c9f",description:"سیاهرگ‌ها خون را به قلب برمی‌گردانند. شبکه‌های سطحی و عمقی خون بافت‌ها را جمع می‌کنند و سیاهرگ‌های ریوی خون اکسیژن‌دار ریه‌ها را به قلب می‌آورند."},
+ {id:"skeletal",name:"اسکلت",color:"#e2d9ba",description:"استخوان‌ها چارچوب نگه‌دارنده‌ی بدن را می‌سازند، از اندام‌ها محافظت می‌کنند و محل اتصال عضلات‌اند. مغز استخوان هم سلول‌های خون می‌سازد و املاح را ذخیره می‌کند."},
+ {id:"muscular",name:"عضلات",color:"#a85b50",description:"عضلات اسکلتی با کشیدن استخوان‌ها حرکت می‌سازند. همراه با وترها مفاصل را حرکت می‌دهند، وضعیت بدن را حفظ می‌کنند و گرما تولید می‌کنند."},
 ];
 export interface Part {id:string;name:string;conceptId:string;system:SystemId;chunk:number;positions:number;normals:number;indices:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
 export interface Concept {id:string;name:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number}
 export type View = 'three-quarter'|'front'|'back'|'side';
 export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number}
-export const DEFAULT_VISIBLE:SystemId[] = ['cardiac','sensory','skeletal','muscular','arterial','venous','nervous','respiratory','digestive','urinary','lymphatic','endocrine','reproductive','connective'];
+export const DEFAULT_VISIBLE:SystemId[] = ['integumentary'];
 export const EXPLANATIONS:Record<string,string> = {
  "heart":"قلب پمپی عضلانی در قفسه‌ی سینه است. نیمه‌ی راست آن خون را به ریه‌ها می‌فرستد و نیمه‌ی چپ خون را به سراسر بدن می‌رساند.",
  "liver":"بزرگ‌ترین غده‌ی بدن که زیر دیافراگم در سمت راست شکم قرار دارد. مواد جذب‌شده را پردازش می‌کند، صفرا می‌سازد و بسیاری از پروتئین‌های خون را تولید می‌کند.",
