@@ -1,0 +1,8 @@
+{
+  "appId": "com.ourbody.app",
+  "appName": "بدن ما",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": false
+  }
+}
