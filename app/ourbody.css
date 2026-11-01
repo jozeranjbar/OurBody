@@ -54,3 +54,22 @@
 .detail-sheet .detail-accent{display:none}
 .detail-sheet h3{color:var(--sys)}
 .detail-sheet [data-slot=sheet-close]{color:#fff!important;z-index:3}
+
+/* round 5: swap corners, title at the very top, numbered systems */
+.search-corner{left:auto!important;right:14px!important;top:max(12px,env(safe-area-inset-top))!important}
+.top-actions{left:14px!important;right:auto!important;top:max(12px,env(safe-area-inset-top))!important}
+.search-btn{height:42px!important;min-width:140px!important;padding:0 14px!important;font-size:14px!important;border-radius:12px!important}
+.search-btn svg{width:18px!important;height:18px!important}
+.identity{top:0!important}
+.identity h1{line-height:1.1!important;margin:0!important}
+.brand-sub{margin-top:-2px}
+.system-label{white-space:nowrap}
+.layers-panel .panel-heading span{line-height:1.5}
+.panel-foot{flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:8px;padding:10px 0 4px;font-size:13px!important}
+.panel-foot span{text-align:center;color:#475569}
+.panel-foot .toggle-all{width:100%!important;height:40px!important;padding:0 12px!important;border-radius:10px!important;background:#2563eb!important;color:#fff!important;font-size:14px!important;font-weight:600!important}
+@media(max-width:767px){
+.search-btn{min-width:0!important;height:40px!important;padding:0 10px!important;font-size:13px!important}
+.search-corner{right:10px!important;left:auto!important}
+.top-actions{left:10px!important;right:auto!important}
+}
