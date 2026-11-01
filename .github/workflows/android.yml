@@ -26,6 +26,11 @@ jobs:
       - name: Build web app
         run: npm run build
 
+      - name: Prepare models for Android
+        run: |
+          rm -f dist/models/*.gz
+          node -e "const fs=require('fs');const f='dist/models/atlas.json';const a=JSON.parse(fs.readFileSync(f,'utf8'));a.chunks.forEach(c=>{delete c.gzip;delete c.gzipBytes});fs.writeFileSync(f,JSON.stringify(a))"
+
       - name: Add Capacitor
         run: |
           npm install @capacitor/core @capacitor/android
