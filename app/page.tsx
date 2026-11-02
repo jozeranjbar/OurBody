@@ -1,7 +1,7 @@
 import {flushSync} from 'react-dom';
 import {registerAtlasTools} from './agent-tools';
 import {useEffect,useMemo,useRef,useState} from 'react';
-import {Activity,ArrowUpRight,ChevronRight,Focus,Info,Layers3,Maximize,Minimize,Search,X} from 'lucide-react';
+import {Activity,ArrowUpRight,ChevronRight,Focus,Layers3,Maximize,Minimize,Search,X} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Badge} from '@/components/ui/badge';
 import {Switch} from '@/components/ui/switch';
@@ -42,7 +42,7 @@ export default function Home(){
   <div className="vignette"/>
   <header className="identity"><h1 dir="auto">بدن ما</h1></header>
   <div className="search-corner"><Button variant="ghost" className={`search-btn ${panel==='search'?'active':''}`} onClick={()=>openPanel('search')} aria-label="جستجوی عضو"><Search size={20}/><span className="lbl-long">جستجوی عضو</span><span className="lbl-short">جستجو</span></Button></div>
-  <nav className="top-actions" aria-label="پنل‌ها"><Button variant="ghost" className="icon-button about-btn" aria-label="درباره‌ی برنامه" onClick={()=>{setDetails(false);setPanel(null);setAbout(true);}}><Info size={38} strokeWidth={2.8}/></Button><Button variant="ghost" className="fs-btn" aria-label={clean?'خروج از نمای تمام‌صفحه':'نمای تمام‌صفحه'} title={clean?'خروج از نمای تمام‌صفحه':'نمای تمام‌صفحه'} onClick={()=>{setPanel(null);setDetails(false);setClean(c=>!c);}}>{clean?<Minimize size={18}/>:<Maximize size={18}/>}</Button></nav>
+  <nav className="top-actions" aria-label="پنل‌ها"><Button variant="ghost" className="icon-button about-btn" aria-label="درباره‌ی برنامه" onClick={()=>{setDetails(false);setPanel(null);setAbout(true);}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10.6" strokeWidth="1.9"/><path d="M12 18.3v-7" strokeWidth="3.2"/><path d="M12 6.9h.01" strokeWidth="3.8"/></svg></Button><Button variant="ghost" className="fs-btn" aria-label={clean?'خروج از نمای تمام‌صفحه':'نمای تمام‌صفحه'} title={clean?'خروج از نمای تمام‌صفحه':'نمای تمام‌صفحه'} onClick={()=>{setPanel(null);setDetails(false);setClean(c=>!c);}}>{clean?<Minimize size={28}/>:<Maximize size={28}/>}</Button></nav>
   <section className={`layers-panel glass ${panel==='layers'?'mobile-open':''}`} aria-label="دستگاه‌های بدن">
    <div className="panel-heading"><span>دستگاه‌های بدن را روشن کنید</span><Button variant="ghost" className="mobile-only icon-button" onClick={()=>setPanel(null)} aria-label="بستن"><X size={18}/></Button></div>
    <div className="system-list">{activeSystems.map((s,i)=><div className={`system-row ${state.visible.includes(s.id)?'enabled':''}`} key={s.id}><Button variant="ghost" className="system-name" title={`فقط ${s.name}`} onClick={()=>setState(v=>({...v,visible:[s.id],isolate:false,selected:[]}))}><span className="system-num">{nf(i+1)}</span><span className="system-label">{s.name}</span></Button><Switch checked={state.visible.includes(s.id)} onCheckedChange={()=>toggle(s.id)} aria-label={`نمایش ${s.name}`} /></div>)}</div>
