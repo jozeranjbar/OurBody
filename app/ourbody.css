@@ -105,3 +105,11 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .layers-panel .panel-heading span{text-align:right}
 .identity h1{font-family:'Noto Naskh Arabic','Vazirmatn','Noto Sans Arabic',serif!important;font-weight:800!important;text-shadow:0 1px 0 #b91c1c,0 2px 0 #991b1b,0 3px 0 #7f1d1d,0 8px 14px rgba(0,0,0,.28)}
 .studio .bottom-dock.glass,.studio .bottom-dock{background:rgba(252,231,243,.96)!important}
+
+/* round 9: compact panel under the search field, switch fix */
+@media(min-width:768px) and (min-height:601px){
+.studio .layers-panel{top:calc(max(12px,env(safe-area-inset-top)) + 50px)!important;right:14px!important;width:fit-content!important;max-height:calc(100dvh - max(12px,env(safe-area-inset-top)) - 50px - 175px)!important}
+}
+.layers-panel .panel-heading{width:0;min-width:100%}
+.system-row [data-slot=switch],.system-row [data-slot=switch] *{direction:ltr}
+.panel-foot{padding-top:12px}
