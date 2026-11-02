@@ -17,7 +17,7 @@ import {DEFAULT_VISIBLE,SYSTEMS,hasExplanation,explanation,type Atlas,type Conce
 const initial:SceneState={explode:0,visible:DEFAULT_VISIBLE,selected:[],isolate:false,view:'three-quarter',rotate:false,reset:0};
 export default function Home(){
  const detailTitle=useRef<HTMLHeadingElement>(null);
- const [atlas,setAtlas]=useState<Atlas|null>(null),[state,setState]=useState(initial),[progress,setProgress]=useState(0),[error,setError]=useState(''),[panel,setPanel]=useState<'layers'|'search'|null>(null),[details,setDetails]=useState(false),[about,setAbout]=useState(false),[query,setQuery]=useState(''),[chosen,setChosen]=useState<Concept|null>(null);
+ const [atlas,setAtlas]=useState<Atlas|null>(null),[state,setState]=useState(initial),[progress,setProgress]=useState(0),[error,setError]=useState(''),[panel,setPanel]=useState<'layers'|'search'|null>(()=>typeof window!=='undefined'&&window.matchMedia('(max-width:767px)').matches?'layers':null),[details,setDetails]=useState(false),[about,setAbout]=useState(false),[query,setQuery]=useState(''),[chosen,setChosen]=useState<Concept|null>(null);
  const [clean,setClean]=useState(false);
  const [drag,setDrag]=useState({x:0,y:0});
  const dragRef=useRef<{px:number;py:number;ox:number;oy:number}|null>(null);
