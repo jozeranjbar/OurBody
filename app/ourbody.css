@@ -148,3 +148,20 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .about-copy a:nth-of-type(2){background:#dcfce7;color:#15803d!important}
 .about-copy a:nth-of-type(3){background:#f3e8ff;color:#7e22ce!important}
 .about-contact{color:#db2777!important;font-weight:700;font-size:14px}
+
+/* round 12: 10% smaller corner buttons, black text in the green bar */
+.top-actions .about-btn{width:58px!important;min-width:58px!important;height:58px!important}
+.top-actions .about-btn svg{width:49px!important;height:49px!important}
+.top-actions .fs-btn{width:49px!important;min-width:49px!important;height:49px!important}
+.top-actions .fs-btn svg{width:25px!important;height:25px!important}
+@media(min-width:768px) and (min-height:601px){
+.studio .view-controls{top:calc(max(12px,env(safe-area-inset-top)) + 126px)!important}
+}
+@media(max-width:767px){
+.top-actions .about-btn{width:49px!important;min-width:49px!important;height:49px!important}
+.top-actions .about-btn svg{width:40px!important;height:40px!important}
+.top-actions .fs-btn{width:41px!important;min-width:41px!important;height:41px!important}
+.top-actions .fs-btn svg{width:22px!important;height:22px!important}
+}
+.studio .view-controls button{color:#000!important}
+.studio .view-controls button.active{background:#1e293b!important;color:#fff!important}
