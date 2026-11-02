@@ -165,3 +165,17 @@ body .detail-sheet{right:auto!important;left:95px!important}
 }
 .studio .view-controls button{color:#000!important}
 .studio .view-controls button.active{background:#1e293b!important;color:#fff!important}
+
+/* round 13: phone - persistent compact systems side bar (right edge) */
+@media(max-width:767px){
+.studio .layers-panel.mobile-open{display:flex!important;top:172px!important;bottom:calc(150px + env(safe-area-inset-bottom))!important;left:auto!important;right:8px!important;width:164px!important;max-height:none!important;height:auto!important;padding:8px 8px 6px!important;border-radius:14px!important;z-index:25}
+.studio .layers-panel.mobile-open .panel-heading{font-size:11px!important;line-height:1.5;padding:0!important;margin-bottom:4px!important;gap:4px}
+.studio .layers-panel.mobile-open .panel-heading .mobile-only{min-width:30px!important;width:30px!important;height:30px!important;min-height:30px!important;flex-shrink:0}
+.studio .layers-panel.mobile-open .system-row{min-height:36px!important;gap:4px}
+.studio .layers-panel.mobile-open .system-name{min-height:36px!important;font-size:12px!important;gap:4px}
+.studio .layers-panel.mobile-open .system-num{min-width:16px;font-size:11px}
+.studio .layers-panel.mobile-open .system-row [data-slot=switch]{transform:scale(.78)!important;transform-origin:left center!important;margin:0 -6px 0 0!important}
+.studio .layers-panel.mobile-open .system-list{padding-left:0!important;padding-right:0!important}
+.studio .layers-panel.mobile-open .panel-foot{padding-top:6px!important;min-height:0!important}
+.studio .layers-panel.mobile-open .panel-foot .toggle-all{height:34px!important;min-height:34px!important;font-size:12px!important}
+}
