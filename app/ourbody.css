@@ -11,7 +11,7 @@
 .top-actions .about-btn svg{width:38px!important;height:38px!important}
 .top-actions .fs-btn{width:54px!important;min-width:54px!important;height:30px!important;min-height:0!important;padding:0!important;border:0!important;border-radius:8px!important;color:#fff!important;background:#1e293b!important;box-shadow:0 4px 12px #1e293b55!important}
 .top-actions .fs-btn:hover{background:#334155!important}
-.clean-mode .identity,.clean-mode .layers-panel,.clean-mode .layers-btn,.clean-mode .dock-btn,.clean-mode .scene-caption,.clean-mode .about-btn{display:none!important}
+.clean-mode .identity,.clean-mode .layers-panel,.clean-mode .layers-btn,.clean-mode .scene-caption,.clean-mode .about-btn{display:none!important}
 @media(max-width:767px){
 .identity h1{font-size:40px!important}
 .brand-sub{font-size:18px}
@@ -162,3 +162,27 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .studio .bottom-dock .dock-btn.active{background:#1e293b!important;color:#fff!important}
 .studio .bottom-dock .dock-btn:disabled{opacity:.4}
 .studio .scene-caption{bottom:calc(150px + env(safe-area-inset-bottom))}
+
+/* round 15 */
+/* 2: Reset / Move as real raised keys */
+.studio .bottom-dock .dock-btn{width:62px!important;min-width:62px!important;min-height:62px!important;padding:6px 2px!important;border-radius:16px!important;border:1px solid rgba(15,23,42,.25)!important;color:#fff!important;font-size:12px!important;font-weight:800;text-shadow:0 1px 1px rgba(0,0,0,.25);box-shadow:0 4px 0 rgba(15,23,42,.35),0 8px 14px rgba(15,23,42,.25),inset 0 1px 0 rgba(255,255,255,.45)!important;transition:transform .08s,box-shadow .08s,filter .15s}
+.studio .bottom-dock .dock-reset{background:linear-gradient(180deg,#fbbf24,#f97316)!important}
+.studio .bottom-dock .dock-rotate{background:linear-gradient(180deg,#818cf8,#4f46e5)!important}
+.studio .bottom-dock .dock-rotate.active{background:linear-gradient(180deg,#34d399,#059669)!important;color:#fff!important}
+.studio .bottom-dock .dock-btn:active:not(:disabled){transform:translateY(3px);box-shadow:0 1px 0 rgba(15,23,42,.35),0 3px 6px rgba(15,23,42,.25),inset 0 1px 0 rgba(255,255,255,.35)!important}
+.studio .bottom-dock .dock-btn:disabled{opacity:.45;filter:grayscale(.6)}
+.studio .bottom-dock .dock-btn svg{width:22px;height:22px}
+/* 3: info and fullscreen icons, 10% smaller, same on phone and tablet */
+.studio .top-actions .about-btn{width:44px!important;min-width:44px!important;height:44px!important}
+.studio .top-actions .about-btn svg{width:36px!important;height:36px!important}
+.studio .top-actions .fs-btn{width:37px!important;min-width:37px!important;height:37px!important}
+.studio .top-actions .fs-btn svg{width:20px!important;height:20px!important}
+/* 4: full screen hides search + systems drawer */
+.studio.clean-mode .search-corner,.studio.clean-mode .layers-panel,.studio.clean-mode .layers-btn{display:none!important}
+/* 5: systems drawer fits all 15 rows (may overlap the bottom bar while open) */
+.studio .layers-panel{--row:clamp(26px,calc((100dvh - 270px)/15),40px);max-height:calc(100dvh - max(12px,env(safe-area-inset-top)) - 112px - 12px - env(safe-area-inset-bottom))!important;padding:12px 12px 12px!important}
+.studio .layers-panel .system-row,.studio .layers-panel .system-name{min-height:var(--row)!important;height:var(--row)}
+.studio .layers-panel .panel-heading{font-size:12px!important;margin-bottom:2px!important}
+.studio .layers-panel .panel-heading .mobile-only{width:26px!important;min-width:26px!important;height:26px!important;min-height:26px!important}
+.studio .layers-panel .panel-foot{padding-top:8px!important}
+.studio .layers-panel .panel-foot .toggle-all{height:36px!important;min-height:36px!important}
