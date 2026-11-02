@@ -14,7 +14,7 @@
 .view-controls{width:auto!important}
 .view-controls button{width:auto!important;min-width:56px!important;padding:0 8px!important}
 .view-controls button span{font-size:13px!important;font-weight:600;white-space:nowrap}
-.clean-mode .identity,.clean-mode .layers-panel,.clean-mode .view-controls,.clean-mode .bottom-dock,.clean-mode .scene-caption,.clean-mode .about-btn{display:none!important}
+.clean-mode .identity,.clean-mode .layers-panel,.clean-mode .view-controls,.clean-mode .dock-layers,.clean-mode .scene-caption,.clean-mode .about-btn{display:none!important}
 @media(max-width:767px){
 .identity h1{font-size:40px!important}
 .brand-sub{font-size:18px}
@@ -85,3 +85,13 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .identity h1{background:none!important;-webkit-background-clip:border-box;background-clip:border-box;color:#dc2626!important;-webkit-text-fill-color:#dc2626!important}
 .identity .brand-sub{font-size:17px;color:#ec4899;font-weight:700}
 @media(max-width:767px){.identity .brand-sub{font-size:14px}}
+
+/* round 7: system rows, tall side bar, small-screen scaling */
+.system-row{direction:rtl}
+.system-name{direction:rtl!important;text-align:right!important;justify-content:flex-start!important}
+.system-num{display:inline-block;min-width:24px;text-align:center;font-weight:700;color:#1d4ed8}
+.system-row [data-slot=switch]{transform-origin:left center!important;margin-right:0!important}
+@media(min-width:768px) and (min-height:601px){
+.studio .layers-panel{top:66px!important;bottom:175px!important;max-height:none!important}
+}
+.identity,.search-corner,.top-actions,.layers-panel,.view-controls,.bottom-dock,.scene-caption,.detail-sheet,.search-panel,.about-sheet{zoom:var(--ui-zoom,1)}
