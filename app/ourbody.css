@@ -11,10 +11,7 @@
 .top-actions .about-btn svg{width:38px!important;height:38px!important}
 .top-actions .fs-btn{width:54px!important;min-width:54px!important;height:30px!important;min-height:0!important;padding:0!important;border:0!important;border-radius:8px!important;color:#fff!important;background:#1e293b!important;box-shadow:0 4px 12px #1e293b55!important}
 .top-actions .fs-btn:hover{background:#334155!important}
-.view-controls{width:auto!important}
-.view-controls button{width:auto!important;min-width:56px!important;padding:0 8px!important}
-.view-controls button span{font-size:13px!important;font-weight:600;white-space:nowrap}
-.clean-mode .identity,.clean-mode .layers-panel,.clean-mode .view-controls,.clean-mode .dock-layers,.clean-mode .scene-caption,.clean-mode .about-btn{display:none!important}
+.clean-mode .identity,.clean-mode .layers-panel,.clean-mode .layers-btn,.clean-mode .dock-btn,.clean-mode .scene-caption,.clean-mode .about-btn{display:none!important}
 @media(max-width:767px){
 .identity h1{font-size:40px!important}
 .brand-sub{font-size:18px}
@@ -36,7 +33,6 @@
 .search-corner{position:absolute;top:max(14px,env(safe-area-inset-top));left:14px;z-index:5}
 .lbl-short{display:none}
 .clean-mode .search-corner{display:none!important}
-@media(min-width:768px){.layers-panel{top:130px!important}}
 @media(max-width:767px){
 .search-corner{left:10px;top:max(10px,env(safe-area-inset-top))}
 .lbl-long{display:none}.lbl-short{display:inline}
@@ -76,12 +72,9 @@
 
 /* round 6: swap side bars, soft backgrounds, title colours */
 @media(min-width:768px) and (min-height:601px){
-.studio .layers-panel{left:auto!important;right:30px!important}
-.studio .view-controls{right:auto!important;left:30px!important}
 body .detail-sheet{right:auto!important;left:95px!important}
 }
 .studio .layers-panel,.studio .layers-panel.mobile-open{background:rgba(219,234,254,.94)!important}
-.studio .view-controls{background:rgba(220,252,231,.94)!important}
 .identity h1{background:none!important;-webkit-background-clip:border-box;background-clip:border-box;color:#dc2626!important;-webkit-text-fill-color:#dc2626!important}
 .identity .brand-sub{font-size:17px;color:#ec4899;font-weight:700}
 @media(max-width:767px){.identity .brand-sub{font-size:14px}}
@@ -91,15 +84,9 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .system-name{direction:rtl!important;text-align:right!important;justify-content:flex-start!important}
 .system-num{display:inline-block;min-width:24px;text-align:center;font-weight:700;color:#1d4ed8}
 .system-row [data-slot=switch]{transform-origin:left center!important;margin-right:0!important}
-@media(min-width:768px) and (min-height:601px){
-.studio .layers-panel{top:66px!important;bottom:175px!important;max-height:none!important}
-}
 .identity,.search-corner,.top-actions,.layers-panel,.view-controls,.bottom-dock,.scene-caption,.detail-sheet,.search-panel,.about-sheet{zoom:var(--ui-zoom,1)}
 
 /* round 8: compact side bar, right-aligned heading, 3D title, pink dock */
-@media(min-width:768px) and (min-height:601px){
-.studio .layers-panel{top:66px!important;bottom:auto!important;height:auto!important;max-height:calc(100dvh - 66px - 175px)!important;width:216px!important;padding:16px 10px 12px 10px!important}
-}
 .studio .system-list{flex:0 1 auto!important;min-height:0;direction:rtl;padding-right:0!important;padding-left:4px!important;scrollbar-gutter:auto!important}
 .layers-panel .panel-heading{direction:rtl;text-align:right;justify-content:flex-start!important;gap:8px}
 .layers-panel .panel-heading span{text-align:right}
@@ -107,9 +94,6 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .studio .bottom-dock.glass,.studio .bottom-dock{background:rgba(252,231,243,.96)!important}
 
 /* round 9: compact panel under the search field, switch fix */
-@media(min-width:768px) and (min-height:601px){
-.studio .layers-panel{top:calc(max(12px,env(safe-area-inset-top)) + 50px)!important;right:14px!important;width:fit-content!important;max-height:calc(100dvh - max(12px,env(safe-area-inset-top)) - 50px - 175px)!important}
-}
 .layers-panel .panel-heading{width:0;min-width:100%}
 .system-row [data-slot=switch],.system-row [data-slot=switch] *{direction:ltr}
 .panel-foot{padding-top:12px}
@@ -119,9 +103,6 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .top-actions .about-btn svg{width:54px!important;height:54px!important}
 .top-actions .fs-btn{width:54px!important;min-width:54px!important;height:54px!important;border-radius:10px!important}
 .top-actions .fs-btn svg{width:28px!important;height:28px!important}
-@media(min-width:768px) and (min-height:601px){
-.studio .view-controls{left:14px!important;right:auto!important;top:calc(max(12px,env(safe-area-inset-top)) + 138px)!important;transform:none!important}
-}
 @media(max-width:767px){
 .top-actions .about-btn{width:54px!important;min-width:54px!important;height:54px!important}
 .top-actions .about-btn svg{width:44px!important;height:44px!important}
@@ -154,28 +135,30 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .top-actions .about-btn svg{width:49px!important;height:49px!important}
 .top-actions .fs-btn{width:49px!important;min-width:49px!important;height:49px!important}
 .top-actions .fs-btn svg{width:25px!important;height:25px!important}
-@media(min-width:768px) and (min-height:601px){
-.studio .view-controls{top:calc(max(12px,env(safe-area-inset-top)) + 126px)!important}
-}
 @media(max-width:767px){
 .top-actions .about-btn{width:49px!important;min-width:49px!important;height:49px!important}
 .top-actions .about-btn svg{width:40px!important;height:40px!important}
 .top-actions .fs-btn{width:41px!important;min-width:41px!important;height:41px!important}
 .top-actions .fs-btn svg{width:22px!important;height:22px!important}
 }
-.studio .view-controls button{color:#000!important}
-.studio .view-controls button.active{background:#1e293b!important;color:#fff!important}
 
-/* round 13: phone - persistent compact systems side bar (right edge) */
-@media(max-width:767px){
-.studio .layers-panel.mobile-open{display:flex!important;top:172px!important;bottom:calc(150px + env(safe-area-inset-bottom))!important;left:auto!important;right:8px!important;width:164px!important;max-height:none!important;height:auto!important;padding:8px 8px 6px!important;border-radius:14px!important;z-index:25}
-.studio .layers-panel.mobile-open .panel-heading{font-size:11px!important;line-height:1.5;padding:0!important;margin-bottom:4px!important;gap:4px}
-.studio .layers-panel.mobile-open .panel-heading .mobile-only{min-width:30px!important;width:30px!important;height:30px!important;min-height:30px!important;flex-shrink:0}
-.studio .layers-panel.mobile-open .system-row{min-height:36px!important;gap:4px}
-.studio .layers-panel.mobile-open .system-name{min-height:36px!important;font-size:12px!important;gap:4px}
-.studio .layers-panel.mobile-open .system-num{min-width:16px;font-size:11px}
-.studio .layers-panel.mobile-open .system-row [data-slot=switch]{transform:scale(.78)!important;transform-origin:left center!important;margin:0 -6px 0 0!important}
-.studio .layers-panel.mobile-open .system-list{padding-left:0!important;padding-right:0!important}
-.studio .layers-panel.mobile-open .panel-foot{padding-top:6px!important;min-height:0!important}
-.studio .layers-panel.mobile-open .panel-foot .toggle-all{height:34px!important;min-height:34px!important;font-size:12px!important}
-}
+/* round 14: unified phone+tablet layout */
+.studio .search-corner{display:flex!important;flex-direction:column;align-items:flex-end;gap:8px;right:14px!important;left:auto!important;top:max(12px,env(safe-area-inset-top))!important}
+.studio .top-actions{left:14px!important}
+.studio .search-corner .search-btn,.studio .search-corner .layers-btn{width:124px!important;min-width:124px!important;height:42px!important;padding:0 14px!important;font-size:14px!important;font-weight:600!important;border-radius:12px!important;display:inline-flex!important;align-items:center;justify-content:center;gap:10px!important;border:0!important;color:#fff!important}
+.studio .search-corner .layers-btn{background:linear-gradient(135deg,#6366f1,#2563eb)!important;box-shadow:0 6px 18px #2563eb55!important}
+.studio .search-corner .layers-btn.active{filter:brightness(1.12)}
+.lbl-long{display:none!important}
+.lbl-short{display:inline!important}
+.studio .layers-panel{display:flex!important;flex-direction:column;position:absolute!important;left:auto!important;right:14px!important;top:calc(max(12px,env(safe-area-inset-top)) + 112px)!important;bottom:auto!important;width:224px!important;height:auto!important;max-height:calc(100dvh - max(12px,env(safe-area-inset-top)) - 112px - 175px)!important;padding:14px 12px 16px!important;border-radius:16px!important;z-index:30;visibility:hidden;opacity:0;pointer-events:none;transform:translateX(24px);transition:opacity .2s,transform .2s,visibility 0s .2s}
+.studio .layers-panel.mobile-open{visibility:visible;opacity:1;pointer-events:auto;transform:none;transition:opacity .2s,transform .2s,visibility 0s}
+.studio .layers-panel .panel-heading .mobile-only{display:inline-flex!important}
+.studio .layers-panel .system-row,.studio .layers-panel .system-name{min-height:40px!important}
+.studio .layers-panel .system-name{font-size:13px!important}
+.studio .layers-panel .system-row [data-slot=switch]{transform:none!important;margin:0!important}
+.studio .bottom-dock{left:50%;right:auto;transform:translateX(-50%);width:min(560px,calc(100% - 24px));max-width:none;margin:0;bottom:calc(24px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:10px!important;padding:12px!important}
+.studio .bottom-dock .explode-control{flex:1;min-width:0}
+.studio .bottom-dock .dock-btn{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:60px!important;min-width:60px!important;height:auto!important;min-height:56px;padding:6px 2px!important;font-size:12px!important;font-weight:700;color:#1e293b;border-radius:12px;flex-shrink:0;white-space:normal}
+.studio .bottom-dock .dock-btn.active{background:#1e293b!important;color:#fff!important}
+.studio .bottom-dock .dock-btn:disabled{opacity:.4}
+.studio .scene-caption{bottom:calc(150px + env(safe-area-inset-bottom))}
