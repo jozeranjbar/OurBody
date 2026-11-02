@@ -95,3 +95,13 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .studio .layers-panel{top:66px!important;bottom:175px!important;max-height:none!important}
 }
 .identity,.search-corner,.top-actions,.layers-panel,.view-controls,.bottom-dock,.scene-caption,.detail-sheet,.search-panel,.about-sheet{zoom:var(--ui-zoom,1)}
+
+/* round 8: compact side bar, right-aligned heading, 3D title, pink dock */
+@media(min-width:768px) and (min-height:601px){
+.studio .layers-panel{top:66px!important;bottom:auto!important;height:auto!important;max-height:calc(100dvh - 66px - 175px)!important;width:216px!important;padding:16px 10px 12px 10px!important}
+}
+.studio .system-list{flex:0 1 auto!important;min-height:0;direction:rtl;padding-right:0!important;padding-left:4px!important;scrollbar-gutter:auto!important}
+.layers-panel .panel-heading{direction:rtl;text-align:right;justify-content:flex-start!important;gap:8px}
+.layers-panel .panel-heading span{text-align:right}
+.identity h1{font-family:'Noto Naskh Arabic','Vazirmatn','Noto Sans Arabic',serif!important;font-weight:800!important;text-shadow:0 1px 0 #b91c1c,0 2px 0 #991b1b,0 3px 0 #7f1d1d,0 8px 14px rgba(0,0,0,.28)}
+.studio .bottom-dock.glass,.studio .bottom-dock{background:rgba(252,231,243,.96)!important}
