@@ -180,7 +180,7 @@ body .detail-sheet{right:auto!important;left:95px!important}
 /* 4: full screen hides search + systems drawer */
 .studio.clean-mode .search-corner,.studio.clean-mode .layers-panel,.studio.clean-mode .layers-btn{display:none!important}
 /* 5: systems drawer fits all 15 rows (may overlap the bottom bar while open) */
-.studio .layers-panel{--row:clamp(26px,calc((100dvh - 270px)/15),40px);max-height:calc(100dvh - max(12px,env(safe-area-inset-top)) - 112px - 12px - env(safe-area-inset-bottom))!important;padding:12px 12px 12px!important}
+.studio .layers-panel{--avail:calc((100dvh - 8px - env(safe-area-inset-bottom))/var(--ui-zoom,1) - max(12px,env(safe-area-inset-top)) - 112px);--row:clamp(26px,calc((var(--avail) - 118px)/15),40px);max-height:var(--avail)!important;padding:12px 12px 12px!important}
 .studio .layers-panel .system-row,.studio .layers-panel .system-name{min-height:var(--row)!important;height:var(--row)}
 .studio .layers-panel .panel-heading{font-size:12px!important;margin-bottom:2px!important}
 .studio .layers-panel .panel-heading .mobile-only{width:26px!important;min-width:26px!important;height:26px!important;min-height:26px!important}
