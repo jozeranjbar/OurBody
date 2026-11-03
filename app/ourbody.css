@@ -190,3 +190,11 @@ body .detail-sheet{right:auto!important;left:95px!important}
 /* round 16: very light green page background */
 html,body,.studio{background:#d8edfa!important}
 .vignette{background:radial-gradient(ellipse at 51% 43%,transparent 35%,#4a90d014 100%)!important}
+
+/* round 17: whole detail card is draggable, instantly */
+.detail-sheet{touch-action:none!important;user-select:text!important;-webkit-user-select:text!important;cursor:grab;will-change:translate;transition-property:opacity!important}
+.detail-sheet .detail-header,.detail-sheet button{user-select:none!important;-webkit-user-select:none!important}
+.detail-sheet .detail-scroll{cursor:text}
+.detail-sheet:active{cursor:grabbing}
+.detail-sheet button,.detail-sheet a{cursor:pointer}
+.detail-sheet .detail-scroll{touch-action:none!important;overscroll-behavior:contain}
