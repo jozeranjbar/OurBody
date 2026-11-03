@@ -186,3 +186,7 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .studio .layers-panel .panel-heading .mobile-only{width:26px!important;min-width:26px!important;height:26px!important;min-height:26px!important}
 .studio .layers-panel .panel-foot{padding-top:8px!important}
 .studio .layers-panel .panel-foot .toggle-all{height:36px!important;min-height:36px!important}
+
+/* round 16: very light green page background */
+html,body,.studio{background:#eaf6ee!important}
+.vignette{background:radial-gradient(ellipse at 51% 43%,transparent 35%,#5fae8014 100%)!important}
