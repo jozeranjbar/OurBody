@@ -188,5 +188,5 @@ body .detail-sheet{right:auto!important;left:95px!important}
 .studio .layers-panel .panel-foot .toggle-all{height:36px!important;min-height:36px!important}
 
 /* round 16: very light green page background */
-html,body,.studio{background:#eaf6ee!important}
-.vignette{background:radial-gradient(ellipse at 51% 43%,transparent 35%,#5fae8014 100%)!important}
+html,body,.studio{background:#d8edfa!important}
+.vignette{background:radial-gradient(ellipse at 51% 43%,transparent 35%,#4a90d014 100%)!important}
